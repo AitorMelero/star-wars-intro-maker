@@ -1,7 +1,7 @@
 export const Prelude: React.FC = () => {
   return (
-    <section id="prelude" className="toFadeInAndOutAnimation">
-      <article>
+    <section id="prelude">
+      <article className="toFadeInAndOutAnimation">
         A long time ago in a galaxy far,
         <br />
         far away....

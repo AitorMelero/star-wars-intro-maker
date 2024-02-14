@@ -24,9 +24,7 @@ export const StarWarsIntro: React.FC = () => {
   return (
     <>
       <Audio />
-      {/* {isPrelude ? <Prelude /> : <CrawlText />} */}
       {isPrelude ? <Prelude /> : isTitle ? <Title /> : <CrawlText />}
-      {/* <CrawlText /> */}
     </>
   )
 }

@@ -1,5 +1,3 @@
-import { Title } from './Title'
-
 export const CrawlText: React.FC = () => {
   return (
     <>
