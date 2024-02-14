@@ -5,7 +5,7 @@ import { Prelude } from './Prelude'
 export const StarWarsIntro: React.FC = () => {
   return (
     <>
-      <Audio />
+      {/* <Audio /> */}
       <Prelude />
       {/* <CrawlText /> */}
     </>

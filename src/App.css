@@ -56,3 +56,19 @@ body {
     transform: rotateX(25deg) translateZ(-2500px);
   }
 }
+
+/* My styles */
+#prelude {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+#prelude > article {
+  color: #4bd5ee;
+  font-size: 79px;
+  text-align: start;
+}
