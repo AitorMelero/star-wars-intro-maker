@@ -88,3 +88,15 @@ body {
     opacity: 1;
   }
 }
+
+@font-face {
+  font-family: 'Starjedi'; /*a name to be used later*/
+  src: url('./styles/fonts/Starjedi.ttf'); /*URL to font*/
+}
+
+.star-wars-title {
+  color: black;
+  font-family: 'Starjedi';
+  /* text-shadow: -6px 0 yellow, 0 6px yellow, 6px 0 yellow, 0 -6px yellow; */
+  -webkit-text-stroke: 8px yellow;
+}

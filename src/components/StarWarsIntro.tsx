@@ -14,7 +14,7 @@ export const StarWarsIntro: React.FC = () => {
 
   return (
     <>
-      <Audio />
+      {/* <Audio /> */}
       {isPrelude ? <Prelude /> : <CrawlText />}
     </>
   )

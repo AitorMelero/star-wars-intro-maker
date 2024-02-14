@@ -5,6 +5,9 @@ export const CrawlText: React.FC = () => {
 
       <section className="star-wars">
         <div className="crawl">
+          <header>
+            <h1 className="star-wars-title">Star <br />Wars</h1>
+          </header>
           <div className="title">
             <p>Episode IV</p>
             <h1>A New Hope</h1>
