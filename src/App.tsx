@@ -1,10 +1,9 @@
 import './App.css'
+import { StarWarsIntro } from './components/StarWarsIntro'
 
 const App = (): JSX.Element => {
   return (
-    <>
-      <h1>Star Wars Intro Maker</h1>
-    </>
+    <StarWarsIntro />
   )
 }
 
