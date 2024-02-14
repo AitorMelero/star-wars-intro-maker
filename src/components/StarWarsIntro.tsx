@@ -6,19 +6,27 @@ import { Title } from './Title'
 
 export const StarWarsIntro: React.FC = () => {
   const [isPrelude, setIsPrelude] = useState(true)
+  const [isTitle, setIsTitle] = useState(false)
 
   useEffect(() => {
     setTimeout(() => {
       setIsPrelude(false)
+      setIsTitle(true)
     }, 9000)
   }, [])
 
+  useEffect(() => {
+    setTimeout(() => {
+      setIsTitle(false)
+    }, 7000)
+  }, [isPrelude])
+
   return (
     <>
-      {/* <Audio /> */}
+      <Audio />
       {/* {isPrelude ? <Prelude /> : <CrawlText />} */}
+      {isPrelude ? <Prelude /> : isTitle ? <Title /> : <CrawlText />}
       {/* <CrawlText /> */}
-      <Title />
     </>
   )
 }
