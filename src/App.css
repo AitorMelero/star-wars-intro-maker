@@ -94,9 +94,19 @@ body {
   src: url('./styles/fonts/Starjedi.ttf'); /*URL to font*/
 }
 
+.star-wars-title-header {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+}
+
 .star-wars-title {
   color: black;
   font-family: 'Starjedi';
-  /* text-shadow: -6px 0 yellow, 0 6px yellow, 6px 0 yellow, 0 -6px yellow; */
-  -webkit-text-stroke: 8px yellow;
+  font-size: 40vw;
+  margin: 0;
+  text-shadow: -6px 0 yellow, 0 6px yellow, 6px 0 yellow, 0 -6px yellow;
+  /* -webkit-text-stroke: 2px yellow; */
 }

@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { Audio } from './Audio'
 import { CrawlText } from './CrawlText'
 import { Prelude } from './Prelude'
+import { Title } from './Title'
 
 export const StarWarsIntro: React.FC = () => {
   const [isPrelude, setIsPrelude] = useState(true)
@@ -15,7 +16,9 @@ export const StarWarsIntro: React.FC = () => {
   return (
     <>
       {/* <Audio /> */}
-      {isPrelude ? <Prelude /> : <CrawlText />}
+      {/* {isPrelude ? <Prelude /> : <CrawlText />} */}
+      {/* <CrawlText /> */}
+      <Title />
     </>
   )
 }
