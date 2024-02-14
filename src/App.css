@@ -49,9 +49,9 @@ body {
 @keyframes crawl {
   0% {
     top: -100px;
-    transform: rotateX(20deg)  translateZ(0);
+    transform: rotateX(20deg) translateZ(0);
   }
-  100% { 
+  100% {
     top: -6000px;
     transform: rotateX(25deg) translateZ(-2500px);
   }
@@ -71,4 +71,20 @@ body {
   color: #4bd5ee;
   font-size: 79px;
   text-align: start;
+}
+
+.toFadeInAndOutAnimation {
+  opacity: 0;
+  animation: fade 7s linear;
+}
+
+@keyframes fade {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  15%,
+  90% {
+    opacity: 1;
+  }
 }
