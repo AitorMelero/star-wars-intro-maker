@@ -1,7 +1,6 @@
 body {
   width: 100%;
   height: 100%;
-  /* background: #000; */
   background-image: url("./assets/bg-stars.png");
   overflow: hidden;
 }
@@ -34,7 +33,7 @@ body {
   position: relative;
   top: 99999px;
   transform-origin: 50% 100%;
-  animation: crawl 60s linear;
+  animation: crawl 70s linear;
 }
 
 .crawl > .title {
@@ -51,14 +50,29 @@ body {
   0% {
     top: 300px;
     transform: rotateX(20deg) translateZ(0);
+    opacity: 1;
+  }
+  90% {
+    opacity: 0.5;
   }
   100% {
     top: -6000px;
     transform: rotateX(25deg) translateZ(-2500px);
+    opacity: 0;
   }
 }
 
 /* My styles */
+.lucasfilm-video-section {
+  align-items: center;
+  background-color: black;
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  justify-content: center;
+  width: 100vw;
+}
+
 #prelude {
   align-items: center;
   background-color: black;
@@ -98,7 +112,6 @@ body {
 
 .star-wars-title-header {
   align-items: center;
-  /* background-image: url("./assets/bg-stars.png"); */
   display: flex;
   justify-content: center;
   height: 100vh;
@@ -111,7 +124,6 @@ body {
   font-size: 40vw;
   margin: 0;
   text-shadow: -6px 0 yellow, 0 6px yellow, 6px 0 yellow, 0 -6px yellow;
-  /* -webkit-text-stroke: 2px yellow; */
 }
 
 @keyframes zoomOut {
@@ -136,10 +148,4 @@ body {
 .zoomOut {
   animation: zoomOut 8s;
   opacity: 0;
-}
-
-.crawl-text-bg {
-  /* background-image: url("./assets/bg-stars.png"); */
-  /* height: 100vh; */
-  /* width: 100vw; */
 }
