@@ -27,14 +27,18 @@ export const StarWarsIntro: React.FC = () => {
   }, [])
 
   return (
-    <>
-      {isLucasfilmIntro
-        ? <Lucasfilm />
-        : <>
-            <Audio />
-            {isPrelude ? <Prelude /> : isTitle ? <Title /> : <CrawlText />}
-          </>
-      }
-    </>
+    <main>
+      <section className='star-background-1'>
+        {isLucasfilmIntro
+          ? <Lucasfilm />
+          : <>
+              <Audio />
+              {isPrelude ? <Prelude /> : isTitle ? <Title /> : <CrawlText />}
+            </>
+        }
+      </section>
+
+      <section className='star-background-1'></section>
+    </main>
   )
 }
