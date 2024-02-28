@@ -4,17 +4,13 @@ import { Prelude } from './Prelude'
 import { Title } from './Title'
 import { FormPage } from './FormPage'
 import intro from '../assets/intro.mp3'
+import { useAudio } from '../hooks/useAudio'
 
 export const StarWarsIntro: React.FC = () => {
   const [isFormPage, setIsFormPage] = useState(true)
   const [isPrelude, setIsPrelude] = useState(false)
   const [isTitle, setIsTitle] = useState(false)
-  const audio = new Audio(intro)
-
-  useEffect(() => {
-    audio.preload = 'auto'
-    audio.loop = false
-  }, [])
+  const { playAudio } = useAudio(intro)
 
   useEffect(() => {
     if (!isFormPage) {
@@ -31,10 +27,6 @@ export const StarWarsIntro: React.FC = () => {
       }, 17000)
     }
   }, [isFormPage])
-
-  const playAudio = async (): Promise<void> => {
-    await audio.play()
-  }
 
   const playIntro = (): void => {
     setIsFormPage(false)
