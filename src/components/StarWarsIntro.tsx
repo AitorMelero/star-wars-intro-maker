@@ -1,33 +1,57 @@
 import { useEffect, useState } from 'react'
-import { Audio } from './Audio'
 import { CrawlText } from './CrawlText'
 import { Prelude } from './Prelude'
 import { Title } from './Title'
+import { FormPage } from './FormPage'
+import intro from '../assets/intro.mp3'
 
 export const StarWarsIntro: React.FC = () => {
-  const [isPrelude, setIsPrelude] = useState(true)
+  const [isFormPage, setIsFormPage] = useState(true)
+  const [isPrelude, setIsPrelude] = useState(false)
   const [isTitle, setIsTitle] = useState(false)
+  const audio = new Audio(intro)
+
+  useEffect(() => {
+    audio.preload = 'auto'
+    audio.loop = false
+  }, [])
 
   useEffect(() => {
     setTimeout(() => {
       setIsPrelude(false)
       setIsTitle(true)
-    }, 9000)
+    }, 10000)
 
     setTimeout(() => {
       setIsTitle(false)
-    }, 16000)
-  }, [])
+    }, 17000)
+  }, [isFormPage])
+
+  const playAudio = async (): Promise<void> => {
+    await audio.play()
+  }
+
+  const playIntro = (): void => {
+    setIsFormPage(false)
+    setIsPrelude(true)
+    playAudio()
+      .catch(error => {
+        console.log(error)
+      })
+  }
 
   return (
     <main>
       <section className="star-background-1">
-        <Audio />
-        {isPrelude ? <Prelude /> : isTitle ? <Title /> : <CrawlText />}
+        {isFormPage
+          ? <FormPage playIntro={playIntro} />
+          : <>
+              {isPrelude ? <Prelude /> : isTitle ? <Title /> : <CrawlText />}
+            </>
+        }
       </section>
 
-      <section className="star-background-1">
-      </section>
+      <section className="star-background-1"></section>
     </main>
   )
 }
