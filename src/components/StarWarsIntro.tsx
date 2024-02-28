@@ -2,7 +2,7 @@ import { CrawlText } from './CrawlText'
 import { Prelude } from './Prelude'
 import { Title } from './Title'
 import { FormPage } from './FormPage'
-import { useIntro } from '../hooks/useIntro'
+import { useIntro } from '../hooks'
 
 export const StarWarsIntro: React.FC = () => {
   const { isFormPage, isPrelude, isTitle, playIntro } = useIntro()
