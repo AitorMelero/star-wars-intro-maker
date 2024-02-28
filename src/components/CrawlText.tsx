@@ -1,44 +1,30 @@
 export const CrawlText: React.FC = () => {
   return (
     <>
-      <div className="fade">
-      </div>
+      <div className="fade"></div>
 
       <section className="star-wars">
         <div className="crawl">
           <div className="title">
-            <p>Episode IV</p>
-            <h1>A New Hope</h1>
+            <p>Episode IX</p>
+            <h1 style={{ fontSize: '200%' }}>THE RISE OF SKYWALKER</h1>
           </div>
 
           <p>
-            It is a period of civil war. Rebel spaceships, striking from a
-            hidden base, have won their first victory against the evil Galactic
-            Empire.
+            The dead speak! The galaxy has heard a mysterious broadcast, a
+            threat of REVENGE in the sinister voice of the late EMPEROR
+            PALPATINE.
           </p>
 
           <p>
-            During the battle, Rebel spies managed to steal secret plans to the
-            Empire’s ultimate weapon, the DEATH STAR, an armored space station
-            with enough power to destroy an entire planet.
+            GENERAL LEIA ORGANA dispatches secret agents to gather intelligence,
+            while REY, the last hope of the Jedi, trains for battle against the
+            diabolical FIRST ORDER.
           </p>
 
           <p>
-            Pursued by the Empire’s sinister agents, Princess Leia races home
-            aboard her starship, custodian of the stolen plans that can save her
-            people and restore freedom to the galaxy….
-          </p>
-
-          <p>
-            It is a period of civil war. Rebel spaceships, striking from a
-            hidden base, have won their first victory against the evil Galactic
-            Empire.
-          </p>
-
-          <p>
-            Pursued by the Empire’s sinister agents, Princess Leia races home
-            aboard her starship, custodian of the stolen plans that can save her
-            people and restore freedom to the galaxy….
+            Meanwhile, Supreme Leader KYLO REN rages in search of the phantom
+            Emperor, determined to destroy any threat to his power....
           </p>
         </div>
       </section>
