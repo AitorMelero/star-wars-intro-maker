@@ -17,14 +17,19 @@ export const StarWarsIntro: React.FC = () => {
   }, [])
 
   useEffect(() => {
-    setTimeout(() => {
-      setIsPrelude(false)
-      setIsTitle(true)
-    }, 10000)
+    if (!isFormPage) {
+      setTimeout(() => {
+        setIsPrelude(false)
+        setIsTitle(true)
+        playAudio().catch((error) => {
+          console.log(error)
+        })
+      }, 10000)
 
-    setTimeout(() => {
-      setIsTitle(false)
-    }, 17000)
+      setTimeout(() => {
+        setIsTitle(false)
+      }, 17000)
+    }
   }, [isFormPage])
 
   const playAudio = async (): Promise<void> => {
@@ -34,21 +39,18 @@ export const StarWarsIntro: React.FC = () => {
   const playIntro = (): void => {
     setIsFormPage(false)
     setIsPrelude(true)
-    playAudio()
-      .catch(error => {
-        console.log(error)
-      })
   }
 
   return (
     <main>
       <section className="star-background-1">
         {isFormPage
-          ? <FormPage playIntro={playIntro} />
-          : <>
-              {isPrelude ? <Prelude /> : isTitle ? <Title /> : <CrawlText />}
-            </>
-        }
+          ? (
+          <FormPage playIntro={playIntro} />
+            )
+          : (
+          <>{isPrelude ? <Prelude /> : isTitle ? <Title /> : <CrawlText />}</>
+            )}
       </section>
 
       <section className="star-background-1"></section>
