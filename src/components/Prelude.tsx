@@ -1,6 +1,8 @@
+import '../styles/Prelude.css'
+
 export const Prelude: React.FC = () => {
   return (
-    <section id="prelude">
+    <section className="prelude">
       <article className="toFadeInAndOutAnimation">
         A long time ago in a galaxy far,
         <br />

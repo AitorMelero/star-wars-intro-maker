@@ -1,3 +1,9 @@
+/* Font */
+@font-face {
+  font-family: 'Starjedi';
+  src: url('./styles/fonts/Starjedi.ttf');
+}
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -11,6 +17,9 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* Color */
+  --main-color: #ffd54e;
+  --secondary-color: #4bd5ee;
 }
 
 a {
@@ -28,6 +37,15 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+
+  /* Own styles */
+  animation-fill-mode: forwards;
+  animation: moveBG 88s linear;
+  background-color: black;
+  height: 100%;
+  overflow: hidden;
+  transform: translateY(-100vh);
+  width: 100%;
 }
 
 h1 {
@@ -41,7 +59,7 @@ button {
   padding: 0.6em 1.2em;
   font-size: 1em;
   font-weight: 500;
-  font-family: inherit;
+  font-family: 'Starjedi';
   background-color: #1a1a1a;
   cursor: pointer;
   transition: border-color 0.25s;
@@ -64,5 +82,24 @@ button:focus-visible {
   }
   button {
     background-color: #f9f9f9;
+  }
+}
+
+/* Own styles */
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Animations */
+@keyframes moveBG {
+  from {
+    transform: translateY(0);
+  }
+  97% {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-100vh);
   }
 }

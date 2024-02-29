@@ -1,3 +1,5 @@
+import '../styles/CrawlText.css'
+
 export const CrawlText: React.FC = () => {
   return (
     <>
@@ -7,7 +9,7 @@ export const CrawlText: React.FC = () => {
         <div className="crawl">
           <div className="title">
             <p>Episode IX</p>
-            <h1 style={{ fontSize: '200%' }}>THE RISE OF SKYWALKER</h1>
+            <h1 className="title-film">THE RISE OF SKYWALKER</h1>
           </div>
 
           <p>

@@ -3,6 +3,7 @@ import { Prelude } from './Prelude'
 import { Title } from './Title'
 import { FormPage } from './FormPage'
 import { useIntro } from '../hooks'
+import '../styles/StarWarsIntro.css'
 
 export const StarWarsIntro: React.FC = () => {
   const { isFormPage, isPrelude, isTitle, playIntro } = useIntro()

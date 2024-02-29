@@ -1,3 +1,5 @@
+import '../styles/Title.css'
+
 export const Title: React.FC = () => {
   return (
     <header className="star-wars-title-header">

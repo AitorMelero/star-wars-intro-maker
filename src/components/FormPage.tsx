@@ -1,3 +1,5 @@
+import '../styles/FormPage.css'
+
 interface Props {
   playIntro: () => void
 }

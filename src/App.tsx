@@ -1,4 +1,3 @@
-import './App.css'
 import { StarWarsIntro } from './components/StarWarsIntro'
 
 const App = (): JSX.Element => {
