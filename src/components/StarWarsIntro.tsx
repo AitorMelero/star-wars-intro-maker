@@ -14,7 +14,9 @@ export const StarWarsIntro: React.FC = () => {
         {isFormPage
           ? <FormPage playIntro={playIntro} />
           : <>
-              {isPrelude ? <Prelude /> : isTitle ? <Title /> : <CrawlText />}</>}
+              {isPrelude ? <Prelude /> : isTitle ? <Title /> : <CrawlText />}
+            </>
+        }
       </section>
 
       <section className="star-background-1"></section>
