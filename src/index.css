@@ -1,7 +1,12 @@
-/* Font */
+/* Fonts */
 @font-face {
   font-family: 'Starjedi';
   src: url('./styles/fonts/Starjedi.ttf');
+}
+
+@font-face {
+  font-family: 'Prelude';
+  src: url('./styles/fonts/PathwayGothicOne-Regular.ttf');
 }
 
 :root {
