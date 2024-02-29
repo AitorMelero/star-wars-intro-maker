@@ -10,9 +10,9 @@
 
 .prelude-container {
   color: var(--secondary-color);
-  font-family: Arial, Helvetica, sans-serif;
-  /* font-family: 'Prelude'; */
-  font-size: 16px;
+  font-family: 'Prelude';
+  font-size: 20px;
+  letter-spacing: 0.1rem;
   text-align: start;
 }
 
@@ -36,30 +36,31 @@
 /* Media Queries */
 @media (min-width: 640px) {
   .prelude-container {
-    font-size: 26px;
+    font-size: 36px;
   }
 }
 
 @media (min-width: 768px) {
   .prelude-container {
-    font-size: 32px;
+    font-size: 42px;
+    letter-spacing: 0.25rem;
   }
 }
 
 @media (min-width: 1024px) {
   .prelude-container {
-    font-size: 42px;
+    font-size: 52px;
   }
 }
 
 @media (min-width: 1280px) {
   .prelude-container {
-    font-size: 56px;
+    font-size: 66px;
   }
 }
 
 @media (min-width: 1536px) {
   .prelude-container {
-    font-size: 60px;
+    font-size: 70px;
   }
 }
