@@ -22,7 +22,7 @@ body {
   justify-content: center;
   position: relative;
   height: 800px;
-  color: #feda4a;
+  color: #ffd54e;
   font-family: 'Pathway Gothic One', sans-serif;
   font-size: 500%;
   font-weight: 600;
@@ -66,16 +66,6 @@ body {
 }
 
 /* My styles */
-.lucasfilm-video-section {
-  align-items: center;
-  background-color: black;
-  display: flex;
-  flex-direction: row;
-  height: 100vh;
-  justify-content: center;
-  width: 100vw;
-}
-
 #prelude {
   align-items: center;
   background-color: black;
@@ -88,7 +78,7 @@ body {
 
 #prelude > article {
   color: #4bd5ee;
-  font-family: 'Pathway Gothic One', sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 79px;
   text-align: start;
 }
@@ -110,8 +100,8 @@ body {
 }
 
 @font-face {
-  font-family: 'Starjedi'; /*a name to be used later*/
-  src: url('./styles/fonts/Starjedi.ttf'); /*URL to font*/
+  font-family: 'Starjedi';
+  src: url('./styles/fonts/Starjedi.ttf'); 
 }
 
 .star-wars-title-header {
@@ -129,7 +119,7 @@ body {
   font-size: 40vw;
   text-align: center;
   margin: 0;
-  text-shadow: -6px 0 yellow, 0 6px yellow, 6px 0 yellow, 0 -6px yellow;
+  text-shadow: -2px -2px 0 #ffd54e , -2px -1px 0 #ffd54e , -2px 0 0 #ffd54e , -2px 1px 0 #ffd54e , -2px 2px 0 #ffd54e , -1px -2px 0 #ffd54e , -1px -1px 0 #ffd54e , -1px 0 0 #ffd54e , -1px 1px 0 #ffd54e , -1px 2px 0 #ffd54e , 0 -2px 0 #ffd54e , 0 -1px 0 #ffd54e , 0 0 0 #ffd54e , 0 1px 0 #ffd54e , 0 2px 0 #ffd54e , 1px -2px 0 #ffd54e , 1px -1px 0 #ffd54e , 1px 0 0 #ffd54e , 1px 1px 0 #ffd54e , 1px 2px 0 #ffd54e , 2px -2px 0 #ffd54e , 2px -1px 0 #ffd54e , 2px 0 0 #ffd54e , 2px 1px 0 #ffd54e , 2px 2px 0 #ffd54e;
 }
 
 @keyframes zoomOut {
