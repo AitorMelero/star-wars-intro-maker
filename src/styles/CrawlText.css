@@ -45,6 +45,10 @@
 }
 
 @media (min-width: 640px) {
+  .title {
+    margin-bottom: 110px;
+  }
+
   .title-episode {
     font-size: 45%;
   }
@@ -56,6 +60,10 @@
 }
 
 @media (min-width: 768px) {
+  .title {
+    margin-bottom: 130px;
+  }
+
   .title-episode {
     font-size: 60%;
   }
@@ -67,6 +75,10 @@
 }
 
 @media (min-width: 1024px) {
+  .title {
+    margin-bottom: 150px;
+  }
+
   .title-episode {
     font-size: 65%;
   }
@@ -78,6 +90,10 @@
 }
 
 @media (min-width: 1280px) {
+  .title {
+    margin-bottom: 150px;
+  }
+
   .title-episode {
     font-size: 75%;
   }
@@ -89,6 +105,10 @@
 }
 
 @media (min-width: 1536px) {
+  .title {
+    margin-bottom: 175px;
+  }
+
   .title-episode {
     font-size: 100%;
     letter-spacing: 6px;
