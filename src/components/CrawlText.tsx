@@ -8,7 +8,7 @@ export const CrawlText: React.FC = () => {
       <section className="star-wars">
         <div className="crawl">
           <div className="title">
-            <p>Episode IX</p>
+            <p className="title-episode">Episode IX</p>
             <h1 className="title-film">THE RISE OF SKYWALKER</h1>
           </div>
 
