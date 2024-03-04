@@ -29,18 +29,52 @@
   transform-origin: 50% 0%;
 }
 
-.crawl > .title {
-  font-size: 90%;
+.title {
   text-align: center;
 }
 
-.crawl > .title h1 {
-  margin: 0 0 100px;
-  text-transform: uppercase;
+.title-episode {
+  font-size: 30%;
+  letter-spacing: 2px;
 }
 
 .title-film {
   font-size: 200%;
+}
+
+@media (min-width: 640px) {
+  .title-episode {
+    font-size: 40%;
+    letter-spacing: 2px;
+  }
+}
+
+@media (min-width: 768px) {
+  .title-episode {
+    font-size: 50%;
+    letter-spacing: 2px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .title-episode {
+    font-size: 100%;
+    letter-spacing: 6px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .title-episode {
+    font-size: 100%;
+    letter-spacing: 6px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .title-episode {
+    font-size: 100%;
+    letter-spacing: 6px;
+  }
 }
 
 /* Animations */
