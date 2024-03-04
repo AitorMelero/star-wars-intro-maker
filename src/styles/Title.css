@@ -12,20 +12,70 @@
   font-family: 'Starjedi';
   font-size: 40vw;
   margin: 0;
+  letter-spacing: initial;
   text-align: center;
-  text-shadow: -2px -2px 0 var(--main-color), -2px -1px 0 var(--main-color),
-    -2px 0 0 var(--main-color), -2px 1px 0 var(--main-color),
-    -2px 2px 0 var(--main-color), -1px -2px 0 var(--main-color),
-    -1px -1px 0 var(--main-color), -1px 0 0 var(--main-color),
-    -1px 1px 0 var(--main-color), -1px 2px 0 var(--main-color),
-    0 -2px 0 var(--main-color), 0 -1px 0 var(--main-color),
-    0 0 0 var(--main-color), 0 1px 0 var(--main-color),
-    0 2px 0 var(--main-color), 1px -2px 0 var(--main-color),
-    1px -1px 0 var(--main-color), 1px 0 0 var(--main-color),
-    1px 1px 0 var(--main-color), 1px 2px 0 var(--main-color),
-    2px -2px 0 var(--main-color), 2px -1px 0 var(--main-color),
-    2px 0 0 var(--main-color), 2px 1px 0 var(--main-color),
-    2px 2px 0 var(--main-color);
+  --title-width-big: 4px;
+  --title-width-small: 2px;
+  --title-width-negative-big: -4px;
+  --title-width-negative-small: -2px;
+  text-shadow: var(--title-width-negative-big) var(--title-width-negative-big) 0
+      var(--main-color),
+    var(--title-width-negative-big) var(--title-width-negative-small) 0
+      var(--main-color),
+    var(--title-width-negative-big) 0 0 var(--main-color),
+    var(--title-width-negative-big) var(--title-width-small) 0 var(--main-color),
+    var(--title-width-negative-big) var(--title-width-big) 0 var(--main-color),
+    var(--title-width-negative-small) var(--title-width-negative-big) 0
+      var(--main-color),
+    var(--title-width-negative-small) var(--title-width-negative-small) 0
+      var(--main-color),
+    var(--title-width-negative-small) 0 0 var(--main-color),
+    var(--title-width-negative-small) var(--title-width-small) 0
+      var(--main-color),
+    var(--title-width-negative-small) var(--title-width-big) 0 var(--main-color),
+    0 var(--title-width-negative-big) 0 var(--main-color),
+    0 var(--title-width-negative-small) 0 var(--main-color),
+    0 0 0 var(--main-color), 0 var(--title-width-small) 0 var(--main-color),
+    0 var(--title-width-big) 0 var(--main-color),
+    var(--title-width-small) var(--title-width-negative-big) 0 var(--main-color),
+    var(--title-width-small) var(--title-width-negative-small) 0
+      var(--main-color),
+    var(--title-width-small) 0 0 var(--main-color),
+    var(--title-width-small) var(--title-width-small) 0 var(--main-color),
+    var(--title-width-small) var(--title-width-big) 0 var(--main-color),
+    var(--title-width-big) var(--title-width-negative-big) 0 var(--main-color),
+    var(--title-width-big) var(--title-width-negative-small) 0 var(--main-color),
+    var(--title-width-big) 0 0 var(--main-color),
+    var(--title-width-big) var(--title-width-small) 0 var(--main-color),
+    var(--title-width-big) var(--title-width-big) 0 var(--main-color);
+}
+
+/* Media Queries */
+@media (min-width: 640px) {
+  .star-wars-title {
+    --title-width-big: 8px;
+    --title-width-small: 4px;
+    --title-width-negative-big: -8px;
+    --title-width-negative-small: -4px;
+  }
+}
+
+@media (min-width: 768px) {
+  .star-wars-title {
+    --title-width-big: 10px;
+    --title-width-small: 5px;
+    --title-width-negative-big: -10px;
+    --title-width-negative-small: -5px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .star-wars-title {
+    --title-width-big: 12px;
+    --title-width-small: 6px;
+    --title-width-negative-big: -12px;
+    --title-width-negative-small: -6px;
+  }
 }
 
 /* Animations */
