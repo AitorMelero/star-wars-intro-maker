@@ -17,7 +17,7 @@
   justify-content: center;
   /* letter-spacing: 6px; */
   letter-spacing: 2px;
-  line-height: 150%;
+  /* line-height: 150%; */
   perspective: 400px;
   position: relative;
   text-align: justify;
@@ -31,17 +31,23 @@
 }
 
 .title {
+  margin-bottom: 100px;
   text-align: center;
 }
 
 .title-episode {
-  font-size: 30%;
+  font-size: 25%;
+  margin-bottom: 50px;
 }
 
 .title-film {
-  font-size: 35%;
+  font-size: 30%;
   text-transform: uppercase;
   transform: scaleY(3.5);
+}
+
+.crawl > p {
+  font-size: 27%;
 }
 
 @media (min-width: 640px) {
@@ -56,6 +62,10 @@
   .title-film {
     font-size: 50%;
     transform: scaleY(3);
+  }
+
+  .crawl > p {
+    font-size: 47%;
   }
 }
 
@@ -72,6 +82,10 @@
     font-size: 70%;
     transform: scaleY(2.5);
   }
+
+  .crawl > p {
+    font-size: 65%;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -87,6 +101,10 @@
     font-size: 80%;
     transform: scaleY(2);
   }
+
+  .crawl > p {
+    font-size: 70%;
+  }
 }
 
 @media (min-width: 1280px) {
@@ -101,6 +119,10 @@
   .title-film {
     font-size: 100%;
     transform: scaleY(2);
+  }
+
+  .crawl > p {
+    font-size: 85%;
   }
 }
 
@@ -118,6 +140,10 @@
     font-size: 125%;
     transform: scaleY(1.75);
     letter-spacing: 2px;
+  }
+
+  .crawl > p {
+    font-size: 110%;
   }
 }
 
