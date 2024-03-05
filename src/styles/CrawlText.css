@@ -22,9 +22,10 @@
 }
 
 .crawl {
-  animation: crawlMobileDevice 70s linear;
+  /* animation: crawlMobileDevice 70s linear; */
+  animation: crawl 70s linear;
   position: relative;
-  /* top: 99999px; */
+  top: 99999px;
   transform-origin: 50% 0%;
 }
 
@@ -52,7 +53,8 @@
 /* Media queries */
 @media (min-width: 640px) {
   .crawl {
-    animation: crawlMediumDevice 70s linear;
+    /* animation: crawlMediumDevice 70s linear; */
+    animation: crawl 70s linear;
   }
 
   .title {
@@ -196,8 +198,8 @@
 
 @keyframes crawl {
   0% {
-    /* top: 300px; */
-    top: 33%;
+    top: 300px;
+    /* top: 33%; */
     transform: rotateX(20deg) translateZ(0);
     opacity: 1;
   }
@@ -205,8 +207,8 @@
     opacity: 0.5;
   }
   100% {
-    /* top: -6000px; */
-    top: -5000px;
+    top: -6000px;
+    /* top: -5000px; */
     transform: rotateX(25deg) translateZ(-2500px);
     opacity: 0;
   }
