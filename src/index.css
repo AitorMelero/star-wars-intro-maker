@@ -45,7 +45,7 @@ body {
 
   /* Own styles */
   animation-fill-mode: forwards;
-  animation: moveBG 88s linear;
+  animation: moveBG 90s linear;
   background-color: black;
   height: 100%;
   overflow: hidden;
