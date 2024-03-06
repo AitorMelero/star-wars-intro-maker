@@ -91,21 +91,25 @@
 }
 
 @media (min-width: 1024px) {
+  .crawl {
+    animation: crawl 90s linear;
+  }
+
   .title {
     margin-bottom: 150px;
   }
 
   .title-episode {
-    font-size: 65%;
+    font-size: 70%;
   }
 
   .title-film {
-    font-size: 80%;
-    transform: scaleY(2);
+    font-size: 85%;
+    transform: scaleY(2.5);
   }
 
   .crawl > p {
-    font-size: 70%;
+    font-size: 75%;
     margin-bottom: 150px;
   }
 }
