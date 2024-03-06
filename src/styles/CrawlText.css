@@ -8,6 +8,7 @@
 }
 
 .star-wars {
+  animation: opacityCrawl 70s linear;
   color: var(--main-color);
   display: flex;
   font-family: 'Pathway Gothic One', sans-serif;
@@ -18,11 +19,12 @@
   letter-spacing: 2px;
   perspective: 400px;
   position: relative;
+  opacity: 0;
   text-align: justify;
 }
 
 .crawl {
-  animation: crawl 70s linear;
+  animation: crawl 165s linear;
   position: relative;
   top: 99999px;
   transform-origin: 50% 0%;
@@ -51,6 +53,10 @@
 
 /* Media queries */
 @media (min-width: 640px) {
+  .crawl {
+    animation: crawl 135s linear;
+  }
+
   .title {
     margin-bottom: 110px;
   }
@@ -71,6 +77,10 @@
 }
 
 @media (min-width: 768px) {
+  .crawl {
+    animation: crawl 105s linear;
+  }
+
   .title {
     margin-bottom: 130px;
   }
@@ -92,7 +102,7 @@
 
 @media (min-width: 1024px) {
   .crawl {
-    animation: crawl 90s linear;
+    animation: crawl 100s linear;
   }
 
   .title {
@@ -116,7 +126,7 @@
 
 @media (min-width: 1280px) {
   .crawl {
-    animation: crawl 82s linear;
+    animation: crawl 90s linear;
   }
 
   .title {
@@ -169,14 +179,21 @@
   0% {
     top: 300px;
     transform: rotateX(20deg) translateZ(0);
+  }
+  100% {
+    top: -6000px;
+    transform: rotateX(25deg) translateZ(-2500px);
+  }
+}
+
+@keyframes opacityCrawl {
+  0% {
     opacity: 1;
   }
   90% {
     opacity: 0.5;
   }
   100% {
-    top: -6000px;
-    transform: rotateX(25deg) translateZ(-2500px);
     opacity: 0;
   }
 }
