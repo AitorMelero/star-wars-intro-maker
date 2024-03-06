@@ -136,18 +136,18 @@
   }
 
   .title-episode {
-    font-size: 100%;
+    font-size: 120%;
     letter-spacing: 6px;
   }
 
   .title-film {
-    font-size: 125%;
-    transform: scaleY(1.75);
+    font-size: 140%;
+    transform: scaleY(2);
     letter-spacing: 2px;
   }
 
   .crawl > p {
-    font-size: 110%;
+    font-size: 130%;
     margin-bottom: 175px;
   }
 }
