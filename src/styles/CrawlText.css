@@ -111,6 +111,10 @@
 }
 
 @media (min-width: 1280px) {
+  .crawl {
+    animation: crawl 82s linear;
+  }
+
   .title {
     margin-bottom: 150px;
   }
@@ -121,7 +125,7 @@
 
   .title-film {
     font-size: 100%;
-    transform: scaleY(2);
+    transform: scaleY(2.25);
   }
 
   .crawl > p {
@@ -131,6 +135,10 @@
 }
 
 @media (min-width: 1536px) {
+  .crawl {
+    animation: crawl 70s linear;
+  }
+
   .title {
     margin-bottom: 175px;
   }
