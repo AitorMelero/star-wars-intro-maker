@@ -9,7 +9,7 @@ export const StarWarsIntro: React.FC = () => {
   const { isFormPage, isPrelude, isTitle, playIntro } = useIntro()
 
   return (
-    <main>
+    <main className={`star-wars-intro-background ${!isFormPage ? 'star-wars-intro-background-animation' : ''}`}>
       <section className="star-background-1">
         {isFormPage
           ? <FormPage playIntro={playIntro} />
