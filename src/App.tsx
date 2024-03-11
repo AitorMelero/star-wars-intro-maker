@@ -1,8 +1,8 @@
-import { StarWarsIntro } from './components/StarWarsIntro'
+import { AppRouter } from './router/AppRouter'
 
 const App = (): JSX.Element => {
   return (
-    <StarWarsIntro />
+    <AppRouter />
   )
 }
 

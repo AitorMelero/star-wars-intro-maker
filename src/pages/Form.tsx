@@ -1,24 +1,19 @@
-import { type SubmitHandler, useForm } from 'react-hook-form'
+import { useForm } from 'react-hook-form'
 import '../styles/FormPage.css'
-
-interface Props {
-  playIntro: () => void
-}
 
 interface Inputs {
   prelude: string
 }
 
-export const FormPage: React.FC<Props> = ({ playIntro }) => {
+export const Form: React.FC = () => {
   const { register, handleSubmit, watch, formState: { errors } } = useForm<Inputs>()
-  // const onSubmitForm: SubmitHandler<Inputs> = (data) => { console.log(data) }
   const preludeDefault = 'A long time ago in a galaxy far,\nfar away....'
 
   console.log(watch('prelude'))
 
   const onSubmit = (): void => {
     // handleSubmit(onSubmitForm)
-    playIntro()
+    // playIntro()
   }
 
   return (

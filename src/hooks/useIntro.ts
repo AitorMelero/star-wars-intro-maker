@@ -3,20 +3,26 @@ import { useAudio } from './useAudio'
 import intro from '../assets/intro.mp3'
 
 interface UseIntroType {
-  isFormPage: boolean
+  isPlaying: boolean
   isPrelude: boolean
   isTitle: boolean
   playIntro: () => void
 }
 
-export const useIntro = (): UseIntroType => {
-  const [isFormPage, setIsFormPage] = useState(true)
+export const useIntro = (isPlay: boolean): UseIntroType => {
+  const [isPlaying, setIsPlaying] = useState(isPlay)
   const [isPrelude, setIsPrelude] = useState(false)
   const [isTitle, setIsTitle] = useState(false)
   const { playAudio } = useAudio(intro)
 
   useEffect(() => {
-    if (!isFormPage) {
+    if (isPlaying) {
+      setIsPrelude(true)
+    }
+  }, [])
+
+  useEffect(() => {
+    if (isPrelude) {
       setTimeout(() => {
         setIsPrelude(false)
         setIsTitle(true)
@@ -29,15 +35,15 @@ export const useIntro = (): UseIntroType => {
         setIsTitle(false)
       }, 17000)
     }
-  }, [isFormPage])
+  }, [isPrelude])
 
   const playIntro = (): void => {
-    setIsFormPage(false)
+    setIsPlaying(true)
     setIsPrelude(true)
   }
 
   return {
-    isFormPage,
+    isPlaying,
     isPrelude,
     isTitle,
     playIntro
