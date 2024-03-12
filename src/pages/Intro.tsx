@@ -6,10 +6,10 @@ import { useIntro } from '../hooks'
 import '../styles/StarWarsIntro.css'
 
 interface Props {
-  isPlay: boolean
+  isPlay?: boolean
 }
 
-export const Intro: React.FC<Props> = ({ isPlay = false }) => {
+export const Intro: React.FC<Props> = ({ isPlay = true }) => {
   const { isPlaying, isPrelude, isTitle, playIntro } = useIntro(isPlay)
 
   return (

@@ -20,6 +20,6 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src"],
+  "include": ["src", "old/pages/Form.tsx", "old/router/AppRouter.tsx"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

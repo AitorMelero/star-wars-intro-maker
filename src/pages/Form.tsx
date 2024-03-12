@@ -1,23 +1,16 @@
-import { useForm } from 'react-hook-form'
+import { type ActionFunction, Form as RouterForm, redirect } from 'react-router-dom'
 import '../styles/FormPage.css'
 
-interface Inputs {
-  prelude: string
+export const actionForm: ActionFunction = async ({ request, params }) => {
+  // const formData = await request.formData()
+  console.log(request)
+  console.log(params)
+  return redirect('/intro')
 }
 
 export const Form: React.FC = () => {
-  const { register, handleSubmit, watch, formState: { errors } } = useForm<Inputs>()
-  const preludeDefault = 'A long time ago in a galaxy far,\nfar away....'
-
-  console.log(watch('prelude'))
-
-  const onSubmit = (): void => {
-    // handleSubmit(onSubmitForm)
-    // playIntro()
-  }
-
   return (
-    <form className="form-page" onSubmit={onSubmit}>
+    <RouterForm className="form-page" method="post" action="/">
       <h1>Star Wars Intro Maker</h1>
       <p>
         Based on the Kassel Labs{' '}
@@ -30,12 +23,12 @@ export const Form: React.FC = () => {
         </a>
       </p>
 
-      <textarea defaultValue={preludeDefault} {...register('prelude', { required: true })} />
-      {errors.prelude !== undefined && <span>This field is required</span>}
+      <textarea name='prelude' />
 
       <button type="submit">
         Play
       </button>
-    </form>
+
+    </RouterForm>
   )
 }

@@ -1,8 +1,9 @@
-import { AppRouter } from './router/AppRouter'
+import { RouterProvider } from 'react-router-dom'
+import { router } from './router/router'
 
 const App = (): JSX.Element => {
   return (
-    <AppRouter />
+    <RouterProvider router={router} />
   )
 }
 
