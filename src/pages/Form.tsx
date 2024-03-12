@@ -7,10 +7,12 @@ import { type FormType } from '../types/Form'
 export const actionForm: ActionFunction = async ({ request, params }) => {
   const formData = await request.formData()
   const data: FormType = {
-    prelude: formData.get('prelude') as string
+    prelude: formData.get('prelude') as string,
+    title: formData.get('title') as string
   }
 
   const validateResult = validateForm(data)
+  console.log(validateResult)
 
   if (validateResult === true) {
     return redirect('/intro')
@@ -46,6 +48,11 @@ export const Form: React.FC = () => {
       </p>
 
       <textarea name='prelude' />
+      {error && <span>This field is required</span>}
+
+      <br />
+
+      <textarea name='title' rows={2} />
       {error && <span>This field is required</span>}
 
       <button type="submit">
