@@ -1,27 +1,26 @@
 import { type ActionFunction, Form as RouterForm, redirect } from 'react-router-dom'
+import { useState } from 'react'
+import { validateForm } from '../schemas/form'
 import '../styles/FormPage.css'
-import { useEffect, useState } from 'react'
+import { type FormType } from '../types/Form'
 
 export const actionForm: ActionFunction = async ({ request, params }) => {
   const formData = await request.formData()
-  // console.log('Action: ', formData.get('prelude'))
-  console.log('Action: ', formData)
-  // console.log(request)
-  // console.log(params)
-  const error = true
-  if (error) {
-    return redirect('/')
-  } else {
+  const data: FormType = {
+    prelude: formData.get('prelude') as string
+  }
+
+  const validateResult = validateForm(data)
+
+  if (validateResult === true) {
     return redirect('/intro')
+  } else {
+    return redirect('/')
   }
 }
 
 export const Form: React.FC = () => {
   const [error, setError] = useState(false)
-
-  useEffect(() => {
-    console.log('useEffect')
-  }, [])
 
   const onSubmit = (): void => {
     console.log('Onsubmit: ')
