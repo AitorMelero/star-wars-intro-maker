@@ -9,7 +9,7 @@ interface Props {
   isPlay?: boolean
 }
 
-export const Intro: React.FC<Props> = ({ isPlay = true }) => {
+export const Intro: React.FC<Props> = ({ isPlay = false }) => {
   const { isPlaying, isPrelude, isTitle, playIntro } = useIntro(isPlay)
 
   return (
