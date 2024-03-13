@@ -7,3 +7,20 @@
   justify-content: center;
   width: 100vw;
 }
+
+.form-page > textarea {
+  background-color: #080808;
+  border-color: goldenrod;
+  border-radius: 5px;
+  border-width: medium;
+}
+
+.form-page > textarea:hover {
+  box-shadow: 0 0 5px var(--main-color);
+}
+
+.form-page > textarea:focus {
+  border-color: var(--main-color);
+  box-shadow: 0 0 10px var(--main-color);
+  outline: none;
+}
