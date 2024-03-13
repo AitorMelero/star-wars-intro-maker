@@ -8,23 +8,35 @@
   width: 100vw;
 }
 
-.form-page > textarea {
+.web-title {
+  color: var(--main-color);
+  font-family: 'Starjedi';
+  text-shadow: 0 0 20px var(--main-color);
+}
+
+.form-page > p {
+  color: var(--main-color)
+}
+
+.form-field {
   background-color: #080808;
   border-color: goldenrod;
   border-radius: 5px;
+  border-style: solid;
   border-width: medium;
   box-sizing: border-box;
   margin-top: 20px;
   max-width: 800px;
   resize: none;
   width: 60%;
+  word-break: break-word;
 }
 
-.form-page > textarea:hover {
+.form-field:hover {
   box-shadow: 0 0 5px var(--main-color);
 }
 
-.form-page > textarea:focus {
+.form-field:focus {
   border-color: var(--main-color);
   box-shadow: 0 0 10px var(--main-color);
   outline: none;
@@ -47,4 +59,33 @@
   padding-block: 20px;
   text-align: center;
   text-shadow: -2px -2px 0 #ffd54e , -2px -1px 0 #ffd54e , -2px 0 0 #ffd54e , -2px 1px 0 #ffd54e , -2px 2px 0 #ffd54e , -1px -2px 0 #ffd54e , -1px -1px 0 #ffd54e , -1px 0 0 #ffd54e , -1px 1px 0 #ffd54e , -1px 2px 0 #ffd54e , 0 -2px 0 #ffd54e , 0 -1px 0 #ffd54e , 0 0 0 #ffd54e , 0 1px 0 #ffd54e , 0 2px 0 #ffd54e , 1px -2px 0 #ffd54e , 1px -1px 0 #ffd54e , 1px 0 0 #ffd54e , 1px 1px 0 #ffd54e , 1px 2px 0 #ffd54e , 2px -2px 0 #ffd54e , 2px -1px 0 #ffd54e , 2px 0 0 #ffd54e , 2px 1px 0 #ffd54e , 2px 2px 0 #ffd54e;
+}
+
+.form-page > input {
+  color: var(--main-color);
+  font-family: 'Pathway Gothic One', sans-serif;
+  font-size: 18px;
+  letter-spacing: 0.05em;
+  padding: 5px;
+  text-align: center;
+}
+
+.textarea-crawl-text {
+  color: var(--main-color);
+  font-family: 'Pathway Gothic One', sans-serif;
+  font-size: 18px;
+  letter-spacing: 0.05em;
+  padding: 5px;
+  text-align: justify;
+  height: 250px;
+}
+
+.form-button {
+  margin-top: 50px;
+}
+
+.form-page > span {
+  color: red;
+  font-size: 18px;
+  text-shadow: 0 0 10px red;
 }

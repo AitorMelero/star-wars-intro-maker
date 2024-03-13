@@ -11,7 +11,7 @@ export const Form: React.FC = () => {
       className="form-page"
       method="post"
     >
-      <h1>Star Wars Intro Maker</h1>
+      <h1 className='web-title'>Star Wars Intro Maker</h1>
       <p>
         Based on the Kassel Labs{' '}
         <a
@@ -23,22 +23,22 @@ export const Form: React.FC = () => {
         </a>
       </p>
 
-      <textarea name='prelude' className='textarea-prelude' defaultValue={prelude} rows={2} />
+      <textarea name='prelude' className='form-field textarea-prelude' defaultValue={prelude} rows={2} />
       <span id='prelude-error'></span>
 
-      <textarea name='title' className='textarea-title' defaultValue={title} rows={2} />
+      <textarea name='title' className='form-field textarea-title' defaultValue={title} rows={2} />
       <span id='title-error'></span>
 
-      <textarea name='episode' className='textarea-episode' defaultValue={episode} />
+      <input type='text' name='episode' className='form-field input-episode' defaultValue={episode} />
       <span id='episode-error'></span>
 
-      <textarea name='episode-title' className='textarea-episode-title' defaultValue={episodeTitle} />
+      <input type='text' name='episode-title' className='form-field input-episode-title' defaultValue={episodeTitle} />
       <span id='episode-title-error'></span>
 
-      <textarea name='crawl-text' className='textarea-crawl-text' defaultValue={crawlText} />
+      <textarea name='crawl-text' className='form-field textarea-crawl-text' defaultValue={crawlText} />
       <span id='crawl-text-error'></span>
 
-      <button type="submit">
+      <button type="submit" className='form-button'>
         Play
       </button>
 
