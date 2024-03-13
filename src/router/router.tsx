@@ -3,6 +3,7 @@ import { Form } from '../pages/Form'
 import { Error } from '../pages/Error'
 import { Intro } from '../pages/Intro'
 import { actionForm, loaderForm } from '../utils/form'
+import { loaderIntro } from '../utils/intro'
 
 export const router = createBrowserRouter([
   {
@@ -16,6 +17,6 @@ export const router = createBrowserRouter([
     path: 'intro',
     element: <Intro />,
     errorElement: <Error />,
-    loader: loaderForm
+    loader: loaderIntro
   }
 ])
