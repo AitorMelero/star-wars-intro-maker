@@ -23,12 +23,12 @@ export const Form: React.FC = () => {
         </a>
       </p>
 
-      <textarea name='prelude' defaultValue={prelude} rows={2} />
+      <textarea name='prelude' className='textarea-prelude' defaultValue={prelude} rows={2} />
       <span id='prelude-error'></span>
 
       <br />
 
-      <textarea name='title' defaultValue={title} rows={2} />
+      <textarea name='title' className='textarea-title' defaultValue={title} rows={2} />
       <span id='title-error'></span>
 
       <button type="submit">

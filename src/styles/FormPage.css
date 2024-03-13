@@ -13,6 +13,10 @@
   border-color: goldenrod;
   border-radius: 5px;
   border-width: medium;
+  box-sizing: border-box;
+  max-width: 800px;
+  resize: none;
+  width: 60%;
 }
 
 .form-page > textarea:hover {
@@ -23,4 +27,23 @@
   border-color: var(--main-color);
   box-shadow: 0 0 10px var(--main-color);
   outline: none;
+}
+
+.textarea-prelude {
+  color: var(--secondary-color);
+  font-size: 18px;
+  padding: 10px 10%;
+}
+
+.textarea-title {
+  caret-color: var(--main-color);
+  color: #000;
+  font-family: 'Starjedi';
+  font-family: 'Starjedi';
+  font-size: 50px;
+  letter-spacing: initial;
+  line-height: 86%;
+  padding-block: 20px;
+  text-align: center;
+  text-shadow: -2px -2px 0 #ffd54e , -2px -1px 0 #ffd54e , -2px 0 0 #ffd54e , -2px 1px 0 #ffd54e , -2px 2px 0 #ffd54e , -1px -2px 0 #ffd54e , -1px -1px 0 #ffd54e , -1px 0 0 #ffd54e , -1px 1px 0 #ffd54e , -1px 2px 0 #ffd54e , 0 -2px 0 #ffd54e , 0 -1px 0 #ffd54e , 0 0 0 #ffd54e , 0 1px 0 #ffd54e , 0 2px 0 #ffd54e , 1px -2px 0 #ffd54e , 1px -1px 0 #ffd54e , 1px 0 0 #ffd54e , 1px 1px 0 #ffd54e , 1px 2px 0 #ffd54e , 2px -2px 0 #ffd54e , 2px -1px 0 #ffd54e , 2px 0 0 #ffd54e , 2px 1px 0 #ffd54e , 2px 2px 0 #ffd54e;
 }
