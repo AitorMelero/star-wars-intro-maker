@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { type FormType } from '../types/Form'
+import { type ErrorValidate, type FormType } from '../types/Form'
 
 const formSchema = z.object({
   prelude: z.string()
@@ -16,12 +16,7 @@ const formSchema = z.object({
     )
 })
 
-interface ErrorValidate {
-  path: string
-  message: string
-}
-
-export function validateForm (formData: FormType): boolean | ErrorValidate[] {
+export function validateForm (formData: FormType): true | ErrorValidate[] {
   const result = formSchema.safeParse(formData)
 
   if (!result.success) {

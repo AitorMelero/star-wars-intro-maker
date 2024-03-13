@@ -1,39 +1,12 @@
-import { type ActionFunction, Form as RouterForm, redirect } from 'react-router-dom'
-import { useState } from 'react'
-import { validateForm } from '../schemas/form'
+import { Form as RouterForm } from 'react-router-dom'
 import '../styles/FormPage.css'
-import { type FormType } from '../types/Form'
-
-export const actionForm: ActionFunction = async ({ request, params }) => {
-  const formData = await request.formData()
-  const data: FormType = {
-    prelude: formData.get('prelude') as string,
-    title: formData.get('title') as string
-  }
-
-  const validateResult = validateForm(data)
-  console.log(validateResult)
-
-  if (validateResult === true) {
-    return redirect('/intro')
-  } else {
-    return redirect('/')
-  }
-}
 
 export const Form: React.FC = () => {
-  const [error, setError] = useState(false)
-
-  const onSubmit = (): void => {
-    console.log('Onsubmit: ')
-    setError(true)
-  }
-
   return (
     <RouterForm
+      id='form-page'
       className="form-page"
       method="post"
-      onSubmit={onSubmit}
     >
       <h1>Star Wars Intro Maker</h1>
       <p>
@@ -48,12 +21,12 @@ export const Form: React.FC = () => {
       </p>
 
       <textarea name='prelude' />
-      {error && <span>This field is required</span>}
+      <span id='prelude-error'></span>
 
       <br />
 
       <textarea name='title' rows={2} />
-      {error && <span>This field is required</span>}
+      <span id='title-error'></span>
 
       <button type="submit">
         Play
