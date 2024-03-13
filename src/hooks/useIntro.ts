@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react'
-import { useAudio } from './useAudio'
-import intro from '../assets/intro.mp3'
+import { StarWarsAudio } from '../utils/audio'
 
 interface UseIntroType {
   isPlaying: boolean
@@ -13,7 +12,6 @@ export const useIntro = (isPlay: boolean): UseIntroType => {
   const [isPlaying, setIsPlaying] = useState(isPlay)
   const [isPrelude, setIsPrelude] = useState(false)
   const [isTitle, setIsTitle] = useState(false)
-  const { playAudio } = useAudio(intro)
 
   useEffect(() => {
     if (isPlaying) {
@@ -26,9 +24,7 @@ export const useIntro = (isPlay: boolean): UseIntroType => {
       setTimeout(() => {
         setIsPrelude(false)
         setIsTitle(true)
-        playAudio().catch((error) => {
-          console.log(error)
-        })
+        StarWarsAudio.getInstance().play()
       }, 10000)
 
       setTimeout(() => {

@@ -2,6 +2,7 @@ import { type ActionFunction, redirect, type LoaderFunction } from 'react-router
 import { type ErrorValidate, type FormType } from '../types/Form'
 import { validateForm } from '../schemas/form'
 import { DEFAULT_INTRO_DATA } from './consts'
+import { StarWarsAudio } from './audio'
 
 // Action
 export const actionForm: ActionFunction = async ({ request }) => {
@@ -25,6 +26,8 @@ export const actionForm: ActionFunction = async ({ request }) => {
 // Loader
 export const loaderForm: LoaderFunction<FormType> = async () => {
   const data = localStorage.getItem('introData')
+
+  StarWarsAudio.getInstance().pause()
 
   if (data !== null) return JSON.parse(data)
 
