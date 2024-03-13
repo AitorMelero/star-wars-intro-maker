@@ -16,6 +16,7 @@ export const actionForm: ActionFunction = async ({ request }) => {
 
   if (validateResult === true) {
     localStorage.setItem('introData', JSON.stringify(data))
+    localStorage.setItem('isPlay', 'true')
     return redirect('/intro')
   } else {
     paintValidateFormError(validateResult)

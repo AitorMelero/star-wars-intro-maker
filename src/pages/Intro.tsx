@@ -4,15 +4,12 @@ import { PlayButton } from '../components/PlayButton'
 import { Prelude } from '../components/Prelude'
 import { Title } from '../components/Title'
 import { useIntro } from '../hooks'
-import { type FormType } from '../types/Form'
+import { type IntroType } from '../types/Intro'
 import '../styles/StarWarsIntro.css'
 
-interface Props {
-  isPlay?: boolean
-}
-
-export const Intro: React.FC<Props> = ({ isPlay = true }) => {
-  const { prelude, title } = useLoaderData() as FormType
+export const Intro: React.FC = () => {
+  const { data, isPlay } = useLoaderData() as IntroType
+  const { prelude, title } = data
   const { isPlaying, isPrelude, isTitle, playIntro } = useIntro(isPlay)
 
   return (

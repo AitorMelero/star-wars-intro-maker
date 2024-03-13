@@ -20,21 +20,32 @@ export const useIntro = (isPlay: boolean): UseIntroType => {
   }, [])
 
   useEffect(() => {
-    const titleTimeout = setTimeout(() => {
-      setIsPrelude(false)
-      setIsTitle(true)
-      StarWarsAudio.getInstance().play()
-    }, 10000)
+    let titleTimeout: NodeJS.Timeout
 
-    const crawlTimeout = setTimeout(() => {
-      setIsTitle(false)
-    }, 17000)
-
+    if (isPrelude) {
+      titleTimeout = setTimeout(() => {
+        setIsPrelude(false)
+        setIsTitle(true)
+        StarWarsAudio.getInstance().play()
+      }, 10000)
+    }
     return () => {
       clearTimeout(titleTimeout)
-      clearTimeout(crawlTimeout)
     }
   }, [isPrelude])
+
+  useEffect(() => {
+    let crawlTimeout: NodeJS.Timeout
+
+    if (isTitle) {
+      crawlTimeout = setTimeout(() => {
+        setIsTitle(false)
+      }, 7000)
+    }
+    return () => {
+      clearTimeout(crawlTimeout)
+    }
+  }, [isTitle])
 
   const playIntro = (): void => {
     setIsPlaying(true)
