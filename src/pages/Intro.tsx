@@ -1,8 +1,10 @@
+import { useLoaderData } from 'react-router-dom'
 import { CrawlText } from '../components/CrawlText'
 import { PlayButton } from '../components/PlayButton'
 import { Prelude } from '../components/Prelude'
 import { Title } from '../components/Title'
 import { useIntro } from '../hooks'
+import { type FormType } from '../types/Form'
 import '../styles/StarWarsIntro.css'
 
 interface Props {
@@ -10,6 +12,7 @@ interface Props {
 }
 
 export const Intro: React.FC<Props> = ({ isPlay = false }) => {
+  const { prelude, title } = useLoaderData() as FormType
   const { isPlaying, isPrelude, isTitle, playIntro } = useIntro(isPlay)
 
   return (
@@ -18,7 +21,10 @@ export const Intro: React.FC<Props> = ({ isPlay = false }) => {
         {!isPlaying
           ? <PlayButton playIntro={playIntro} />
           : <>
-              {isPrelude ? <Prelude /> : isTitle ? <Title /> : <CrawlText />}
+              {isPrelude
+                ? <Prelude prelude={prelude} />
+                : isTitle ? <Title title={title} /> : <CrawlText />
+              }
             </>
         }
       </section>

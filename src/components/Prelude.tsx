@@ -1,15 +1,19 @@
 import '../styles/Prelude.css'
+import { type FormType } from '../types/Form'
 
-export const Prelude: React.FC = () => {
-  const line1 = 'A long time ago in a galaxy far,'
-  const line2 = 'far away....'
+interface Props {
+  prelude: FormType['prelude']
+}
+
+export const Prelude: React.FC<Props> = ({ prelude }) => {
+  const preludeLines = prelude.trim().split(/\r\n|\r|\n/)
 
   return (
     <section className="prelude">
       <article className="prelude-container toFadeInAndOutAnimation">
-        {line1}
+        {preludeLines[0]}
         <br />
-        {line2}
+        {preludeLines[1]}
       </article>
     </section>
   )

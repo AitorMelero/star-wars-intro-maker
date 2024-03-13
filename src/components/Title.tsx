@@ -1,15 +1,19 @@
 import '../styles/Title.css'
+import { type FormType } from '../types/Form'
 
-export const Title: React.FC = () => {
-  const line1 = 'StaR'
-  const line2 = 'waRS'
+interface Props {
+  title: FormType['title']
+}
+
+export const Title: React.FC<Props> = ({ title }) => {
+  const titleLines = title.trim().split(/\r\n|\r|\n/)
 
   return (
     <header className="star-wars-title-header">
       <h1 className="star-wars-title">
-        {line1}
+        {titleLines[0]}
         <br />
-        {line2}
+        {titleLines[1]}
       </h1>
     </header>
   )

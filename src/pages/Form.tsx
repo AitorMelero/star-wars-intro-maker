@@ -1,7 +1,10 @@
-import { Form as RouterForm } from 'react-router-dom'
+import { Form as RouterForm, useLoaderData } from 'react-router-dom'
+import { type FormType } from '../types/Form'
 import '../styles/FormPage.css'
 
 export const Form: React.FC = () => {
+  const { prelude, title } = useLoaderData() as FormType
+
   return (
     <RouterForm
       id='form-page'
@@ -20,12 +23,12 @@ export const Form: React.FC = () => {
         </a>
       </p>
 
-      <textarea name='prelude' />
+      <textarea name='prelude' defaultValue={prelude} rows={2} />
       <span id='prelude-error'></span>
 
       <br />
 
-      <textarea name='title' rows={2} />
+      <textarea name='title' defaultValue={title} rows={2} />
       <span id='title-error'></span>
 
       <button type="submit">
