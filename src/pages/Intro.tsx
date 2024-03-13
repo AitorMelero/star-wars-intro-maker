@@ -11,7 +11,7 @@ interface Props {
   isPlay?: boolean
 }
 
-export const Intro: React.FC<Props> = ({ isPlay = false }) => {
+export const Intro: React.FC<Props> = ({ isPlay = true }) => {
   const { prelude, title } = useLoaderData() as FormType
   const { isPlaying, isPrelude, isTitle, playIntro } = useIntro(isPlay)
 
