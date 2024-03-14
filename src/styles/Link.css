@@ -1,0 +1,9 @@
+.contact-link {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  font-weight: 600;
+  justify-content: center;
+  margin: 0 8px;
+  padding: 12px 8px;
+}

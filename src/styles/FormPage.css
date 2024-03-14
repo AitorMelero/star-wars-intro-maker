@@ -3,8 +3,8 @@
   background-image: url('../assets/bg-stars.png');
   display: flex;
   flex-direction: column;
-  height: 100vh;
   justify-content: center;
+  margin-bottom: 30px;
   width: 100vw;
 }
 
