@@ -23,10 +23,10 @@ export const Form: React.FC = () => {
         </a>
       </p>
 
-      <textarea name='prelude' className='form-field textarea-prelude' defaultValue={prelude} rows={2} />
+      <textarea name='prelude' className='form-field textarea-prelude' defaultValue={prelude} rows={2} maxLength={70} />
       <span id='prelude-error'></span>
 
-      <textarea name='title' className='form-field textarea-title' defaultValue={title} rows={2} />
+      <textarea name='title' className='form-field textarea-title' defaultValue={title} rows={2} maxLength={70} />
       <span id='title-error'></span>
 
       <input type='text' name='episode' className='form-field input-episode' defaultValue={episode} />

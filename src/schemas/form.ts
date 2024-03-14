@@ -6,13 +6,13 @@ const formSchema = z.object({
     .min(1, { message: 'This field is required' })
     .transform(text => text.split(/\r\n|\r|\n/).length).refine(
       (val) => val <= 2,
-      { message: 'This field text can\'t have more than 2 lines.' }
+      { message: 'This field can\'t have more than 2 lines.' }
     ),
   title: z.string()
     .min(1, { message: 'This field is required' })
     .transform(text => text.split(/\r\n|\r|\n/).length).refine(
       (val) => val <= 2,
-      { message: 'This field text can\'t have more than 2 lines.' }
+      { message: 'This field can\'t have more than 2 lines.' }
     ),
   episode: z.string()
     .min(1, { message: 'This field is required' }),
