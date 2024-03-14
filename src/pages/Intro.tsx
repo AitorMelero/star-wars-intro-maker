@@ -37,7 +37,9 @@ export const Intro: React.FC = () => {
         }
       </section>
 
-      <section className="star-background-1"></section>
+      <section className="star-background-1">
+        <PlayButton text='Play again' playIntro={playIntro} />
+      </section>
     </main>
   )
 }
