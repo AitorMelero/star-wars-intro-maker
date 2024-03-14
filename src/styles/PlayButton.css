@@ -1,8 +1,22 @@
 .play-button-container {
   align-items: center;
+  animation: showButton 1.5s linear;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   height: 100%;
   width: 100%;
+}
+
+.play-button-container > button {
+  margin-bottom: 20px;
+}
+
+@keyframes showButton {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

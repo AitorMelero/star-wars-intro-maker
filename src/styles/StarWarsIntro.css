@@ -6,7 +6,6 @@
 .star-wars-intro-background-animation {
   animation-fill-mode: forwards;
   animation: moveBG 89s linear;
-  transform: translateY(-100vh);
 }
 
 .star-background-1 {

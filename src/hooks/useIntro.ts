@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { StarWarsAudio } from '../utils/audio'
 
 interface UseIntroType {
@@ -6,12 +7,14 @@ interface UseIntroType {
   isPrelude: boolean
   isTitle: boolean
   playIntro: () => void
+  goEditIntro: () => void
 }
 
 export const useIntro = (isPlay: boolean): UseIntroType => {
   const [isPlaying, setIsPlaying] = useState(isPlay)
   const [isPrelude, setIsPrelude] = useState(false)
   const [isTitle, setIsTitle] = useState(false)
+  const navigate = useNavigate()
 
   useEffect(() => {
     if (isPlaying) {
@@ -19,6 +22,21 @@ export const useIntro = (isPlay: boolean): UseIntroType => {
     }
   }, [])
 
+  // Intro time
+  useEffect(() => {
+    let finishTimeout: NodeJS.Timeout
+
+    if (isPlaying) {
+      finishTimeout = setTimeout(() => {
+        setIsPlaying(false)
+      }, 89000)
+    }
+    return () => {
+      clearTimeout(finishTimeout)
+    }
+  }, [isPlaying])
+
+  // Prelude time
   useEffect(() => {
     let titleTimeout: NodeJS.Timeout
 
@@ -34,6 +52,7 @@ export const useIntro = (isPlay: boolean): UseIntroType => {
     }
   }, [isPrelude])
 
+  // Title time
   useEffect(() => {
     let crawlTimeout: NodeJS.Timeout
 
@@ -48,14 +67,20 @@ export const useIntro = (isPlay: boolean): UseIntroType => {
   }, [isTitle])
 
   const playIntro = (): void => {
+    StarWarsAudio.getInstance().pause()
     setIsPlaying(true)
     setIsPrelude(true)
+  }
+
+  const goEditIntro = (): void => {
+    navigate('/')
   }
 
   return {
     isPlaying,
     isPrelude,
     isTitle,
-    playIntro
+    playIntro,
+    goEditIntro
   }
 }
