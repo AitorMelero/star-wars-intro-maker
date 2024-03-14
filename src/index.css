@@ -102,16 +102,3 @@ main {
   display: flex;
   flex-direction: column;
 }
-
-/* Animations */
-@keyframes moveBG {
-  from {
-    transform: translateY(0);
-  }
-  97% {
-    transform: translateY(0);
-  }
-  to {
-    transform: translateY(-100vh);
-  }
-}
