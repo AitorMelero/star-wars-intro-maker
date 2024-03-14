@@ -9,7 +9,7 @@ import '../styles/StarWarsIntro.css'
 
 export const Intro: React.FC = () => {
   const { data, isPlay } = useLoaderData() as IntroType
-  const { prelude, title } = data
+  const { prelude, title, episode, episodeTitle, crawlText } = data
   const { isPlaying, isPrelude, isTitle, playIntro } = useIntro(isPlay)
 
   return (
@@ -20,7 +20,9 @@ export const Intro: React.FC = () => {
           : <>
               {isPrelude
                 ? <Prelude prelude={prelude} />
-                : isTitle ? <Title title={title} /> : <CrawlText />
+                : isTitle
+                  ? <Title title={title} />
+                  : <CrawlText episode={episode} episodeTitle={episodeTitle} crawlText={crawlText} />
               }
             </>
         }

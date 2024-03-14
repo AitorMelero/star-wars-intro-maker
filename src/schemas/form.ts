@@ -13,7 +13,13 @@ const formSchema = z.object({
     .transform(text => text.split(/\r\n|\r|\n/).length).refine(
       (val) => val <= 2,
       { message: 'This field text can\'t have more than 2 lines.' }
-    )
+    ),
+  episode: z.string()
+    .min(1, { message: 'This field is required' }),
+  episodeTitle: z.string()
+    .min(1, { message: 'This field is required' }),
+  crawlText: z.string()
+    .min(1, { message: 'This field is required' })
 })
 
 export function validateForm (formData: FormType): true | ErrorValidate[] {

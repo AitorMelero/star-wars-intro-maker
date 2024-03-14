@@ -1,6 +1,15 @@
 import '../styles/CrawlText.css'
+import { type IntroType } from '../types/Intro'
 
-export const CrawlText: React.FC = () => {
+interface Props {
+  episode: IntroType['data']['episode']
+  episodeTitle: IntroType['data']['episodeTitle']
+  crawlText: IntroType['data']['crawlText']
+}
+
+export const CrawlText: React.FC<Props> = ({ episode, episodeTitle, crawlText }) => {
+  const crawlParagraphs = crawlText.replaceAll('\r\n', '\n').split('\n\n')
+
   return (
     <>
       <div className="fade"></div>
@@ -8,26 +17,12 @@ export const CrawlText: React.FC = () => {
       <section className="star-wars">
         <div className="crawl">
           <div className="title">
-            <p className="title-episode">Episode IX</p>
-            <h1 className="title-film">THE RISE OF SKYWALKER</h1>
+            <p className="title-episode">{episode}</p>
+            <h1 className="title-film">{episodeTitle}</h1>
           </div>
 
-          <p>
-            The dead speak! The galaxy has heard a mysterious broadcast, a
-            threat of REVENGE in the sinister voice of the late EMPEROR
-            PALPATINE.
-          </p>
+          {crawlParagraphs.map((paragraph, key) => <p key={key}>{paragraph}</p>)}
 
-          <p>
-            GENERAL LEIA ORGANA dispatches secret agents to gather intelligence,
-            while REY, the last hope of the Jedi, trains for battle against the
-            diabolical FIRST ORDER.
-          </p>
-
-          <p>
-            Meanwhile, Supreme Leader KYLO REN rages in search of the phantom
-            Emperor, determined to destroy any threat to his power....
-          </p>
         </div>
       </section>
     </>

@@ -9,7 +9,10 @@ export const actionForm: ActionFunction = async ({ request }) => {
   const formData = await request.formData()
   const data: FormType = {
     prelude: formData.get('prelude') as string,
-    title: formData.get('title') as string
+    title: formData.get('title') as string,
+    episode: formData.get('episode') as string,
+    episodeTitle: formData.get('episode-title') as string,
+    crawlText: formData.get('crawl-text') as string
   }
 
   const validateResult = validateForm(data)
