@@ -20,6 +20,10 @@ const formSchema = z.object({
     .min(1, { message: 'This field is required' }),
   crawlText: z.string()
     .min(1, { message: 'This field is required' })
+    .transform(text => text.split(/\r\n|\r|\n/).length).refine(
+      (val) => val <= 6,
+      { message: 'This field can\'t have more than 4 paragraphs.' }
+    )
 })
 
 export function validateForm (formData: FormType): true | ErrorValidate[] {

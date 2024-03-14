@@ -25,9 +25,11 @@
 
 .crawl {
   animation: crawl 165s linear;
+  overflow-wrap: break-word;
   position: relative;
   top: 99999px;
   transform-origin: 50% 0%;
+  width: 100vw;
 }
 
 .title {

@@ -29,14 +29,14 @@ export const Form: React.FC = () => {
       <textarea name='title' className='form-field textarea-title' defaultValue={title} rows={2} maxLength={70} />
       <span id='title-error'></span>
 
-      <input type='text' name='episode' className='form-field input-episode' defaultValue={episode} />
+      <input type='text' name='episode' className='form-field input-episode' defaultValue={episode} maxLength={30} />
       <span id='episode-error'></span>
 
-      <input type='text' name='episode-title' className='form-field input-episode-title' defaultValue={episodeTitle} />
-      <span id='episode-title-error'></span>
+      <input type='text' name='episode-title' className='form-field input-episode-title' defaultValue={episodeTitle} maxLength={30} />
+      <span id='episodeTitle-error'></span>
 
-      <textarea name='crawl-text' className='form-field textarea-crawl-text' defaultValue={crawlText} />
-      <span id='crawl-text-error'></span>
+      <textarea name='crawl-text' className='form-field textarea-crawl-text' defaultValue={crawlText} maxLength={1000} />
+      <span id='crawlText-error'></span>
 
       <button type="submit" className='form-button'>
         Play
