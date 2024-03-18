@@ -1,5 +1,7 @@
 import { Link } from './Link'
 import '../styles/Footer.css'
+import { LinkedInSVG } from './LinkedInSVG'
+import { GitHubSVG } from './GitHubSVG'
 
 export const Footer: React.FC = () => {
   return (
@@ -7,12 +9,12 @@ export const Footer: React.FC = () => {
       <Link
         name="LinkedIn"
         url="https://www.linkedin.com/in/aitor-melero-pic%C3%B3n-678105293/"
-        svg="/assets/brand-linkedin.svg"
+        svg={<LinkedInSVG />}
       />
       <Link
         name="GitHub"
         url="https://github.com/AitorMelero"
-        svg="/assets/brand-github.svg"
+        svg={<GitHubSVG />}
       />
     </footer>
   )

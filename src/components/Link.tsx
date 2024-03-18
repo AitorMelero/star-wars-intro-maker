@@ -3,7 +3,7 @@ import '../styles/Link.css'
 interface Props {
   name: string
   url: string
-  svg: string
+  svg: JSX.Element
 }
 
 export const Link: React.FC<Props> = ({ name, url, svg }) => {
@@ -14,7 +14,7 @@ export const Link: React.FC<Props> = ({ name, url, svg }) => {
       rel="noreferrer"
       className="contact-link"
     >
-      <img src={svg} alt={`${name} image`} />
+      {svg}
       <span>{name}</span>
     </a>
   )
