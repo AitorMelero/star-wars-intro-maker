@@ -4,9 +4,11 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  min-height: 100vh;
 }
 
 .web-title {
+  text-align: center;
   color: var(--main-color);
   font-family: 'Starjedi';
   text-shadow: 0 0 20px var(--main-color);
@@ -75,11 +77,11 @@
   letter-spacing: 0.05em;
   padding: 5px;
   text-align: justify;
-  height: 250px;
+  height: 240px;
 }
 
 .form-button {
-  margin-top: 50px;
+  margin-top: 20px;
 }
 
 .form-page > span {
