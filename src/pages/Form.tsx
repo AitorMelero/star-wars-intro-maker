@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { Form as RouterForm, useLoaderData } from 'react-router-dom'
 import { type FormType } from '../types/Form'
 import { Footer } from '../components/Footer'
@@ -6,8 +7,13 @@ import '../styles/FormPage.css'
 export const Form: React.FC = () => {
   const { prelude, title, episode, episodeTitle, crawlText } = useLoaderData() as FormType
 
+  useEffect(() => {
+    window.scrollTo(0, 0)
+    const bodyElement = document.getElementsByTagName('body')
+    bodyElement[0].setAttribute('style', 'margin: 0;')
+  }, [])
+
   return (
-    <>
       <RouterForm
         id='form-page'
         className="form-page"
@@ -46,6 +52,5 @@ export const Form: React.FC = () => {
 
         <Footer />
       </RouterForm>
-    </>
   )
 }

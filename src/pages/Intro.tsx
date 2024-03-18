@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { useLoaderData } from 'react-router-dom'
 import { CrawlText } from '../components/CrawlText'
 import { PlayButton } from '../components/PlayButton'
@@ -11,6 +12,12 @@ export const Intro: React.FC = () => {
   const { data, isPlay } = useLoaderData() as IntroType
   const { prelude, title, episode, episodeTitle, crawlText } = data
   const { isPlaying, isPrelude, isTitle, playIntro, goEditIntro } = useIntro(isPlay)
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+    const bodyElement = document.getElementsByTagName('body')
+    bodyElement[0].setAttribute('style', 'margin: 0; overflow: hidden; transform: translateY(0);')
+  }, [])
 
   return (
     <main
