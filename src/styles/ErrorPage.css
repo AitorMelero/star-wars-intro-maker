@@ -1,0 +1,13 @@
+.error-page {
+  align-items: center;
+  background-image: url('../assets/bg-stars.png');
+  color: red;
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+  height: 100vh;
+  justify-content: center;
+  overflow: hidden;
+  text-shadow: 0 0 10px red;
+  width: 100vw;
+}
