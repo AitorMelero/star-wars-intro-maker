@@ -19,7 +19,7 @@ export const Form: React.FC = () => {
         className="form-page"
         method="post"
       >
-        <h1 className='web-title'>Star Wars Intro Maker</h1>
+        <h1 className='web-title'>Star wars intro maker</h1>
         <p>
           Based on the Kassel Labs{' '}
           <a
