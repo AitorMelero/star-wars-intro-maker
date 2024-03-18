@@ -3,10 +3,8 @@
   background-image: url('../assets/bg-stars.png');
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
-  /* min-height: 100vh; */
   height: 100%;
-  min-width: 380px;
+  min-width: 360px;
 }
 
 .web-title {
@@ -34,7 +32,7 @@
   box-sizing: border-box;
   margin-top: 20px;
   max-width: 800px;
-  min-width: 200px;
+  min-width: 300px;
   resize: none;
   width: 80%;
   word-break: break-word;
