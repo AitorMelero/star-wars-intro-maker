@@ -13,7 +13,7 @@ export const Footer: React.FC = () => {
       />
       <Link
         name="GitHub"
-        url="https://github.com/AitorMelero"
+        url="https://github.com/AitorMelero/stars-wars-intro-maker"
         svg={<GitHubSVG />}
       />
     </footer>
