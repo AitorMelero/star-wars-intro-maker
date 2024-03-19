@@ -9,6 +9,7 @@
 }
 
 .play-button-container > button {
+  background-color: black;
   margin-bottom: 20px;
 }
 
